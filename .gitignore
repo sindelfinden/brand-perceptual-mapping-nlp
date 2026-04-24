@@ -1,0 +1,27 @@
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+
+# RStudio
+.Rproj.user/
+
+# renv local library
+renv/library/
+renv/staging/
+
+# Raw and cached data
+data/raw/
+cache/
+*.rds
+*.RDS
+
+# Large outputs
+outputs/figures/
+outputs/tables/*timings*
+outputs/tables/*session_info*
+outputs/tables/*generated_files*
+
+# OS files
+.DS_Store
+Thumbs.db
