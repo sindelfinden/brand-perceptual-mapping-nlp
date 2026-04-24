@@ -181,7 +181,9 @@ The pipeline generates:
 - The pipeline is fully reproducible from raw data
 - Execution time depends on hardware (GPU recommended)
 - Bootstrap and Mantel tests are computationally intensive
+
 ---
+
 ### Scientific Contribution
 This repository demonstrates:
 - Extraction of perceptual maps from text without survey data
@@ -189,8 +191,10 @@ This repository demonstrates:
 - Stability validation via bootstrap resampling
 - External validation through human-coded brand categories
 ---
+
 ### Citation
 If you use this code, please cite the associated paper.
+
 ---
 
 ### License
