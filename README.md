@@ -45,23 +45,17 @@ Download the dataset from:
 👉 https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/
 
 Required files:
+- `All_Beauty.json.gz`
+- `meta_All_Beauty.json.gz`
 
 
-All_Beauty.json.gz
-meta_All_Beauty.json.gz
-
-
-Place them in:
-
-
-data/raw/
+Place them in: `data/raw/`
 
 
 If needed, rename them to:
 
-
-All_Beauty_2018.json.gz
-meta_All_Beauty_2018.json.gz
+- `All_Beauty_2018.json.gz`
+- `meta_All_Beauty_2018.json.gz`
 
 
 ---
@@ -75,32 +69,43 @@ This project uses `renv` for reproducibility.
 ```r
 install.packages("renv")
 renv::restore()
-Python Environment (for Sentence-BERT)
+```
 
-The pipeline uses reticulate to interface with Python.
+### Python Environment (for Sentence-BERT)
+
+The pipeline uses `reticulate` to interface with Python.
 
 To automatically configure the environment:
 
+```r
 source("01_python_env.R")
+```
 
 This installs:
+- sentence-transformers
+- PyTorch (GPU-enabled if available)
+- required dependencies
+---
 
-sentence-transformers
-PyTorch (GPU-enabled if available)
-required dependencies
-GPU Support
-GPU is optional but recommended
-Tested with NVIDIA GPU + CUDA
-Falls back to CPU if CUDA is not available
-Running the Pipeline
+### GPU Support
+- GPU is **optional but recommended**
+- Tested with NVIDIA GPU + CUDA
+- Falls back to CPU if CUDA is not available
+---
+
+### Running the Pipeline
 
 To run the full pipeline:
-
+```r
 source("run_pipeline.R")
-Pipeline Configuration
+```
+---
+
+### Pipeline Configuration
 
 Key parameters are controlled via:
 
+```r
 CFG <- list(
     dataset_version = "2018",
     min_chars = 20L,
@@ -119,27 +124,37 @@ CFG <- list(
     
     bootstrap_B = 100L
 )
-Outputs
+```
+---
+
+### Outputs
 
 The pipeline generates:
 
-Data
-Cleaned review datasets
-Review-level embeddings
-Brand-level embeddings
-Models
-PCA, UMAP, t-SNE perceptual maps
-Evaluation
-Mantel correlation results
-kNN preservation metrics
-Bootstrap stability results
-External Validation
-PERMANOVA (adonis)
-Same-label distance test
-Figures
-Perceptual maps (PDF)
-Metric summaries
-Project Structure
+### Data
+- Cleaned review datasets
+- Review-level embeddings
+- Brand-level embeddings
+
+### Models
+- PCA, UMAP, t-SNE perceptual maps
+
+### Evaluation
+- Mantel correlation results
+- kNN preservation metrics
+- Bootstrap stability results
+
+### External Validation
+- PERMANOVA (adonis)
+- Same-label distance test
+
+### Figures
+- Perceptual maps (PDF)
+- Metric summaries
+---
+
+### Project Structure
+```r
 .
 ├── 00_setup.R
 ├── 01_python_env.R
@@ -158,23 +173,25 @@ Project Structure
 ├── renv.lock
 ├── requirements-gpu.txt
 └── README.md
-Notes
-Large intermediate files (.rds, embeddings, cache) are excluded
-The pipeline is fully reproducible from raw data
-Execution time depends on hardware (GPU recommended)
-Bootstrap and Mantel tests are computationally intensive
-Scientific Contribution
+```
+---
 
+### Notes
+- Large intermediate files (.rds, embeddings, cache) are excluded
+- The pipeline is fully reproducible from raw data
+- Execution time depends on hardware (GPU recommended)
+- Bootstrap and Mantel tests are computationally intensive
+---
+### Scientific Contribution
 This repository demonstrates:
-
-Extraction of perceptual maps from text without survey data
-Integration of classical and transformer-based NLP models
-Stability validation via bootstrap resampling
-External validation through human-coded brand categories
-Citation
-
+- Extraction of perceptual maps from text without survey data
+- Integration of classical and transformer-based NLP models
+- Stability validation via bootstrap resampling
+- External validation through human-coded brand categories
+---
+### Citation
 If you use this code, please cite the associated paper.
+---
 
-License
-
+### License
 MIT License
