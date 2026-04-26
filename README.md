@@ -193,7 +193,7 @@ This repository demonstrates:
 ---
 
 ### Citation
-If you use this code, please cite the associated paper. Krastevich, T., Vassileva, B. (2026). Uncovering Latent Brand Positions from Consumer Reviews: An Embedding-Based Approach to Perceptual Mapping. FAIEMA 2026, L'Aquila, Italy; 09-11.09.2026.
+If you use this code, please cite the associated paper. Krastevich, T., Vassileva, B. (2026). Uncovering Latent Brand Positions from Consumer Reviews: An Embedding-Based Approach to Perceptual Mapping. [FAIEMA 2026](https://www.faiema.org/), L'Aquila, Italy; (Forthcoming: 09-11.09.2026).
 
 ---
 
