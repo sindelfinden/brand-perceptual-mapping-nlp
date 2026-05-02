@@ -2,7 +2,7 @@
 
 This repository provides a fully reproducible R-based pipeline for constructing brand perceptual maps from large-scale consumer review data using TF-IDF, Word2Vec, and Sentence-BERT representations.
 
-The implementation accompanies the research paper:
+The implementation accompanies the research paper entitled:
 
 **"Uncovering Latent Brand Positions from Consumer Reviews: An Embedding-Based Approach to Perceptual Mapping"**
 
