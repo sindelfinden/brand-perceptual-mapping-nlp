@@ -15,16 +15,16 @@ This project introduces a data-driven framework for extracting brand positioning
 The pipeline performs:
 
 - Text preprocessing of consumer reviews  
-- Semantic representation learning:
+- Semantic representation learning through:
   - TF-IDF (baseline)
   - Word2Vec
   - Sentence-BERT  
 - Brand-level embedding aggregation  
-- Dimensionality reduction:
+- Dimensionality reduction through:
   - PCA
   - UMAP
   - t-SNE  
-- Quantitative validation:
+- Quantitative validation through:
   - Mantel test
   - kNN neighborhood preservation  
 - Bootstrap-based stability analysis  
